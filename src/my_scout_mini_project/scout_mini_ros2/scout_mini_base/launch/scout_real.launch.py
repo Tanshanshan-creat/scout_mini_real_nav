@@ -28,7 +28,7 @@ def generate_launch_description():
             'frame_id': 'laser_link',       # 必须与 URDF 中的 link 名字一致
             'inverted': False,              # 如果雷达倒装，这里设为 True
             'angle_compensate': True,       # 开启角度补偿
-            'scan_mode': 'Sensitivity'      # A2M8 可选 Standard 或 Sensitivity
+            'scan_mode': 'Standard'      # A2M8 可选 Standard 或 Sensitivity
         }],
         output='screen'
     )

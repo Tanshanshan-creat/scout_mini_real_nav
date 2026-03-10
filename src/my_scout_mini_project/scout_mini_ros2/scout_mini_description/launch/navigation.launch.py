@@ -28,7 +28,7 @@ def generate_launch_description():
             ),
             launch_arguments={
                 'map': map_dir,
-                'use_sim_time': 'True',
+                'use_sim_time': 'False',
                 'params_file': params_file,
             }.items()
         ),

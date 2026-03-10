@@ -14,10 +14,10 @@ scout_mini_base_controller:
     left_wheel_names: ["front_left_wheel_joint", "rear_left_wheel_joint"]
     right_wheel_names: ["front_right_wheel_joint", "rear_right_wheel_joint"]
     publish_rate: 50.0
-    pose_covariance_diagonal : [0.001, 0.001, 1000000.0, 1000000.0, 1000000.0, 0.1]  #将1000修改为0.1，信任里程计 
+    pose_covariance_diagonal : [0.001, 0.001, 1000000.0, 1000000.0, 1000000.0, 500.0]  #原来为1000，数值越大，越不信任里程计
     twist_covariance_diagonal: [0.001, 0.001, 1000000.0, 1000000.0, 1000000.0, 1000.0]
 
-    wheel_separation: 0.462  #原来为0.490
+    wheel_separation: 0.490  #第一次修改为0.462
     wheels_per_side: 1
     wheel_radius: 0.0875
 

@@ -29,7 +29,6 @@ options = {
   landmarks_sampling_ratio = 1.,
 }
 
--- 【Cartographer 强力纠偏版配置】
 
 MAP_BUILDER.use_trajectory_builder_2d = true
 
@@ -37,26 +36,21 @@ MAP_BUILDER.use_trajectory_builder_2d = true
 TRAJECTORY_BUILDER_2D.min_range = 0.2
 TRAJECTORY_BUILDER_2D.max_range = 12.0
 TRAJECTORY_BUILDER_2D.missing_data_ray_length = 3.
-TRAJECTORY_BUILDER_2D.use_imu_data = false  -- 除非你的IMU校准得极其完美，否则ScoutMini建议先关掉
+TRAJECTORY_BUILDER_2D.use_imu_data = false  
 TRAJECTORY_BUILDER_2D.use_online_correlative_scan_matching = true
 
--- 【核心修改 A：增大搜索窗口】
--- 告诉算法：里程计可能偏差 15cm，请在这个范围内把雷达拼图拼好
+-- 增大搜索窗口】
 TRAJECTORY_BUILDER_2D.real_time_correlative_scan_matcher.linear_search_window = 0.15 
--- 告诉算法：角度可能偏差 20度，请尝试在这个范围内修正
 TRAJECTORY_BUILDER_2D.real_time_correlative_scan_matcher.angular_search_window = math.rad(20.)
 
--- 【核心修改 B：Ceres 匹配器权重】
--- 极其不信任平移（设为 1 或 2），强迫算法只看墙壁对齐
 TRAJECTORY_BUILDER_2D.ceres_scan_matcher.translation_weight = 2.
 TRAJECTORY_BUILDER_2D.ceres_scan_matcher.rotation_weight = 20.
 
--- 【核心修改 C：运动过滤】
--- 只有动了才建图，防止静止时噪点把墙壁搞花
+-- 运动过滤】
 TRAJECTORY_BUILDER_2D.motion_filter.max_distance_meters = 0.1
 TRAJECTORY_BUILDER_2D.motion_filter.max_angle_radians = math.rad(1.0)
 
--- 全局优化参数保持默认或微调即可
+-- 全局优化参数
 POSE_GRAPH.optimize_every_n_nodes = 35
 POSE_GRAPH.constraint_builder.min_score = 0.55
 POSE_GRAPH.constraint_builder.global_localization_min_score = 0.6
