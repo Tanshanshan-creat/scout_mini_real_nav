@@ -26,8 +26,7 @@ def generate_launch_description():
             ],
             remappings=[
                 ('/scan', '/scan'),
-        
-                ('/odom', '/scout_mini_base_controller/odom'), 
+                ('/odom', '/odom'),
             ]
         ),
 

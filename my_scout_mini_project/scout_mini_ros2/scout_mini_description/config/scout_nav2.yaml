@@ -14,10 +14,10 @@ amcl:
     map_subscribe_transient_local: True
     set_initial_pose: true
     initial_pose:
-      x: -3.761020064669877
-      y: 0.0771850271807497
+      x: 0.0
+      y: 0.0
       z: 0.0
-      yaw: 2.7024
+      yaw: 0.0
     max_particles: 5000
     min_particles: 1000
     update_min_d: 0.05
@@ -25,7 +25,7 @@ amcl:
     transform_tolerance: 1.0
     laser_max_range: 12.0
     laser_min_range: 0.15
-    likelihood_max_dist: 2.0
+    likelihood_max_dist: 4.0
     max_beams: 60
     resample_interval: 1
 
@@ -56,16 +56,16 @@ controller_server:
       debug_trajectory_details: True
       min_vel_x: 0.0
       min_vel_y: 0.0
-      max_vel_x: 0.5
+      max_vel_x: 0.2
       max_vel_y: 0.0
-      max_vel_theta: 0.5
+      max_vel_theta: 0.3
       min_speed_xy: 0.0
-      max_speed_xy: 1.5
+      max_speed_xy: 0.2
       min_speed_theta: 0.0
-      acc_lim_x: 1.0
+      acc_lim_x: 0.5
       acc_lim_y: 0.0
-      acc_lim_theta: 3.2
-      decel_lim_x: -2.5
+      acc_lim_theta: 1.0
+      decel_lim_x: -1.0
       decel_lim_y: 0.0
       decel_lim_theta: -3.2
       vx_samples: 20
