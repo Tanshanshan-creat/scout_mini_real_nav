@@ -6,6 +6,7 @@ from launch import LaunchDescription
 from launch.actions import DeclareLaunchArgument
 from launch.substitutions import Command, LaunchConfiguration
 from launch_ros.actions import Node
+from launch_ros.parameter_descriptions import ParameterValue
 
 def generate_launch_description():
     use_sim_time = LaunchConfiguration("use_sim_time", default="false")
@@ -42,11 +43,14 @@ def generate_launch_description():
                 output="screen",
                 parameters=[
                     {
-                        "robot_description": Command(
-                            [
-                                "xacro ",
-                                LaunchConfiguration("urdf_file_path"),
-                            ]
+                        "robot_description": ParameterValue(
+                            Command(
+                                [
+                                    "xacro ",
+                                    LaunchConfiguration("urdf_file_path"),
+                                ]
+                            ),
+                            value_type=str,
                         ),
                         "use_sim_time": use_sim_time,
                     }
@@ -57,3 +61,4 @@ def generate_launch_description():
             # 注意看下面：这里必须有闭合的方括号和圆括号
         ]
     )
+

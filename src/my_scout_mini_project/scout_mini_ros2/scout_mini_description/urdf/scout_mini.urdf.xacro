@@ -4,9 +4,12 @@
   <xacro:property name="PI" value="3.1415926535897931" />
 
   <link name="base_footprint"/>
-  
+
+  <!-- REP-105: base_footprint 为 base_link 的父坐标，位于地面高度 -->
   <joint name="base_footprint_joint" type="fixed">
-    <parent link="base_link"/>       <child link="base_footprint"/>   <origin xyz="0 0 0" rpy="0 0 0"/>
+    <parent link="base_footprint"/>
+    <child link="base_link"/>
+    <origin xyz="0 0 0.188" rpy="0 0 0"/>
   </joint>
   <link name="base_link">
     <visual>
@@ -63,35 +66,36 @@
   <xacro:wheel_link prefix="front_right_wheel"/>
   <xacro:wheel_link prefix="rear_right_wheel"/>
 
+  <!-- Scout Mini 实际半轮距 0.416/2 = 0.208 m, 轴距 0.463/2 = 0.2315 m -->
   <joint name="front_left_wheel_joint" type="continuous">
     <parent link="base_link" />
     <child link="front_left_wheel_link" />
-    <origin xyz="0.2319755 0.245 -0.100998" rpy="0 0 0" />
+    <origin xyz="0.2315 0.208 -0.100998" rpy="0 0 0" />
     <axis xyz="0 1 0" rpy="0 0 0" />
   </joint>
   <joint name="rear_left_wheel_joint" type="continuous">
     <parent link="base_link" />
     <child link="rear_left_wheel_link" />
-    <origin xyz="-0.2319755 0.245 -0.100998" rpy="0 0 0" />
+    <origin xyz="-0.2315 0.208 -0.100998" rpy="0 0 0" />
     <axis xyz="0 1 0" rpy="0 0 0" />
   </joint>
   <joint name="front_right_wheel_joint" type="continuous">
     <parent link="base_link" />
     <child link="front_right_wheel_link" />
-    <origin xyz="0.2319755 -0.245 -0.099998" rpy="0 0 0" />
+    <origin xyz="0.2315 -0.208 -0.100998" rpy="0 0 0" />
     <axis xyz="0 1 0" rpy="0 0 0" />
   </joint>
   <joint name="rear_right_wheel_joint" type="continuous">
     <parent link="base_link" />
     <child link="rear_right_wheel_link" />
-    <origin xyz="-0.2319755 -0.245 -0.099998" rpy="0 0 0" />
+    <origin xyz="-0.2315 -0.208 -0.100998" rpy="0 0 0" />
     <axis xyz="0 1 0" rpy="0 0 0" />
   </joint>
 
   <joint name="rplidar_joint" type="fixed">
     <parent link="base_link"/>
     <child link="laser_link"/>
-    <origin xyz="0 0 0.45" rpy="0 0 0"/>
+    <origin xyz="0 0 0.45" rpy="0 0 ${PI}"/>
   </joint>
   <link name="laser_link">
     <visual>
@@ -110,7 +114,7 @@
       <plugin>scout_mini_hardware/ScoutMiniHardware</plugin>
       <param name="interface">can0</param>
       <param name="wheel_radius">0.0875</param>
-      <param name="wheel_separation">0.490</param>
+      <param name="wheel_separation">0.416</param>
     </hardware>
 
     <joint name="front_left_wheel_joint">

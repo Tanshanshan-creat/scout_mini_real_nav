@@ -14,26 +14,32 @@ scout_mini_base_controller:
     left_wheel_names: ["front_left_wheel_joint", "rear_left_wheel_joint"]
     right_wheel_names: ["front_right_wheel_joint", "rear_right_wheel_joint"]
     publish_rate: 50.0
-    pose_covariance_diagonal : [0.001, 0.001, 1000000.0, 1000000.0, 1000000.0, 500.0]  #原来为1000，数值越大，越不信任里程计
-    twist_covariance_diagonal: [0.001, 0.001, 1000000.0, 1000000.0, 1000000.0, 1000.0]
+    # 对角协方差：x,y,z 位置 + r,p,y 姿态
+    # CAN反馈已做部分补偿, 标定后里程计精度合理, 用适中协方差
+    pose_covariance_diagonal : [0.005, 0.005, 1000000.0, 1000000.0, 1000000.0, 0.05]
+    twist_covariance_diagonal: [0.005, 0.005, 1000000.0, 1000000.0, 1000000.0, 0.05]
 
-    wheel_separation: 0.490  #第一次修改为0.462
-    wheels_per_side: 1
+    # Scout Mini 真实轮距（AgileX 官方规格 416 mm）
+    wheel_separation: 0.416
+    # 每侧轮数必须与 *_wheel_names 列表长度一致
+    wheels_per_side: 2
     wheel_radius: 0.0875
 
-    wheel_separation_multiplier: 1.0
+    # 滑移转向校正: 实测标定 (原地360°旋转, odom仅记录245°, 比值=0.682)
+    # CAN内部已做部分补偿 (ω_CAN ≈ 0.92×ω_real), multiplier = 0.92 修正剩余偏差
+    # 公式: ω_odom = ω_CAN / multiplier, 需要 ω_odom = ω_real
+    wheel_separation_multiplier: 0.92
     left_wheel_radius_multiplier: 1.0
     right_wheel_radius_multiplier: 1.0
 
     odom_frame_id: odom
-    base_frame_id: base_link
-    
+    base_frame_id: base_footprint
+
     open_loop: false
     enable_odom_tf: true
 
     cmd_vel_timeout: 0.25
     use_stamped_vel: false
-    preserve_turning_radius: true
 
     publish_cmd: true
     publish_wheel_data: true
@@ -80,3 +86,4 @@ twist_mux:
         topic   : software_runstop
         timeout : 0.0
         priority: 150
+

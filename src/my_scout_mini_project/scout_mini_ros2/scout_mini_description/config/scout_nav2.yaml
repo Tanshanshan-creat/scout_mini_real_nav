@@ -1,58 +1,57 @@
 amcl:
   ros__parameters:
     use_sim_time: False
-
-    transform_tolerance: 3.0
-    
-    max_particles: 3000
-    min_particles: 500
-    
-    #降低更新频率
-    update_min_d: 0.1
-    update_min_a: 0.1
-    
-    alpha1: 0.5  #对抗里程计误差
-    alpha2: 0.5
-    alpha3: 0.5
-    alpha4: 0.5
-    alpha5: 0.5
-    
-    base_frame_id: "base_link"
+    # 运动模型噪声 (Probabilistic Robotics 第 5.4 节)
+    # Scout Mini 是 skid-steer, 转弯时轮子侧滑严重, 里程计噪声大
+    # alpha1: 旋转→旋转噪声 (skid-steer 转弯最不准, 设最大)
+    # alpha2: 平移→旋转噪声 (直走也会有航向偏移)
+    # alpha3: 平移→平移噪声
+    # alpha4: 旋转→平移噪声
+    # skid-steer 混合运动（直线+转向）时偏航噪声更大，alpha2 加大
+    alpha1: 0.5
+    alpha2: 0.8
+    alpha3: 0.3
+    alpha4: 0.3
+    alpha5: 0.2
+    base_frame_id: "base_footprint"
     global_frame_id: "map"
     odom_frame_id: "odom"
     scan_topic: "/scan"
     robot_model_type: "nav2_amcl::DifferentialMotionModel"
     map_subscribe_transient_local: True
-    set_initial_pose: true
-    initial_pose: {x: 0.0, y: 0.0, z: 0.0, yaw: 0.0}
-    
-    # 增加激光雷达的最大探测距离
-    laser_max_range: 20.0
-    laser_min_range: 0.1
-    
-    # 增加似然域的最大距离
-    likelihood_max_dist: 4.0
-    
-    # 【新增】增加粒子群的更新频率
+    # 关闭自动初始位姿：启动后在 RViz 用 2D Pose Estimate 手动给定，
+    # 或执行 reinitialize_global_localization + 自转来收敛
+    set_initial_pose: false
+    max_particles: 5000
+    min_particles: 1000
+    # 每 5cm 或 2.9° 触发一次更新（原来 10cm），更快捕捉偏航漂移
     update_min_d: 0.05
     update_min_a: 0.05
-    
+    transform_tolerance: 0.5
+    laser_max_range: 8.0
+    laser_min_range: 0.2
+    # 收窄似然场宽度: 0.5m 让 AMCL 对航向偏差更敏感
+    # (5°航向偏 × 2m墙距 = 0.17m 偏移, sigma=0.5 可以区分, sigma=1.0 区分不了)
+    likelihood_max_dist: 0.5
+    laser_model_type: "likelihood_field"
+    # 用更多扫描束提高匹配精度（原来 180）
+    max_beams: 360
+    # 每 2 次更新重采样一次，避免粒子耗尽
+    resample_interval: 2
+    # 已收敛后关闭随机粒子注入，防止干扰稳定定位
+    recovery_alpha_slow: 0.0
+    recovery_alpha_fast: 0.0
 
-    robot_model_type: "nav2_amcl::OmniMotionModel"
-    
-    
-# 增加 map_server 的配置
 map_server:
   ros__parameters:
     use_sim_time: False
-    # 如果 launch 文件没传地图，这里作为备选 
-    yaml_filename: "my_scout_map.yaml"
+    yaml_filename: ""
 
 bt_navigator:
   ros__parameters:
     use_sim_time: False
     global_frame: map
-    robot_base_frame: base_link
+    robot_base_frame: base_footprint
     odom_topic: /odom
     bt_loop_duration: 10
     default_server_timeout: 20
@@ -70,16 +69,16 @@ controller_server:
       debug_trajectory_details: True
       min_vel_x: 0.0
       min_vel_y: 0.0
-      max_vel_x: 0.5 #限速
+      max_vel_x: 0.2
       max_vel_y: 0.0
-      max_vel_theta: 0.5 #限速
+      max_vel_theta: 0.3
       min_speed_xy: 0.0
-      max_speed_xy: 1.5
+      max_speed_xy: 0.2
       min_speed_theta: 0.0
-      acc_lim_x: 1.0 #限速
+      acc_lim_x: 0.5
       acc_lim_y: 0.0
-      acc_lim_theta: 3.2
-      decel_lim_x: -2.5
+      acc_lim_theta: 1.0
+      decel_lim_x: -1.0
       decel_lim_y: 0.0
       decel_lim_theta: -3.2
       vx_samples: 20
@@ -89,7 +88,7 @@ controller_server:
       linear_granularity: 0.05
       xy_goal_tolerance: 0.25
       yaw_goal_tolerance: 0.25
-      transform_tolerance: 3.5
+      transform_tolerance: 1.0
       critics: ["RotateToGoal", "Oscillation", "BaseObstacle", "GoalAlign", "PathAlign", "PathDist", "GoalDist"]
       BaseObstacle.scale: 0.02
       PathAlign.scale: 32.0
@@ -107,45 +106,56 @@ local_costmap:
     ros__parameters:
       use_sim_time: False
       global_frame: odom
-      transform_tolerance: 3.5  # 【新增】
-      plugin_names: ["obstacle_layer", "inflation_layer"]
-      plugin_types: ["nav2_costmap_2d::ObstacleLayer", "nav2_costmap_2d::InflationLayer"]
+      robot_base_frame: base_footprint
+      transform_tolerance: 1.0
       rolling_window: true
       width: 3
       height: 3
       resolution: 0.05
-      robot_radius: 0.42 #大于实车半径
-      inflation_layer.inflation_radius: 0.5  #膨胀半径
+      robot_radius: 0.42
+      plugin_names: ["obstacle_layer", "inflation_layer"]
+      plugin_types: ["nav2_costmap_2d::ObstacleLayer", "nav2_costmap_2d::InflationLayer"]
+      inflation_layer.inflation_radius: 0.5
       obstacle_layer:
         enabled: True
         observation_sources: scan
         scan:
           topic: /scan
           max_obstacle_height: 2.0
+          min_obstacle_height: 0.0
           clearing: True
           marking: True
           data_type: "LaserScan"
+          raytrace_max_range: 8.0
+          obstacle_max_range: 8.0
+          observation_persistence: 0.0
+          expected_update_rate: 0.0
 
 global_costmap:
   global_costmap:
     ros__parameters:
       use_sim_time: False
       global_frame: map
-      robot_base_frame: base_link
-      transform_tolerance: 3.5  # 【新增】
+      robot_base_frame: base_footprint
+      transform_tolerance: 1.0
+      robot_radius: 0.42
       plugin_names: ["static_layer", "obstacle_layer", "inflation_layer"]
       plugin_types: ["nav2_costmap_2d::StaticLayer", "nav2_costmap_2d::ObstacleLayer", "nav2_costmap_2d::InflationLayer"]
-      robot_radius: 0.42
-      inflation_layer.inflation_radius: 0.5  #膨胀半径
+      inflation_layer.inflation_radius: 0.5
       obstacle_layer:
         enabled: True
         observation_sources: scan
         scan:
           topic: /scan
           max_obstacle_height: 2.0
+          min_obstacle_height: 0.0
           clearing: True
           marking: True
           data_type: "LaserScan"
+          raytrace_max_range: 8.0
+          obstacle_max_range: 8.0
+          observation_persistence: 0.0
+          expected_update_rate: 0.0
       static_layer:
         map_subscribe_transient_local: True
 

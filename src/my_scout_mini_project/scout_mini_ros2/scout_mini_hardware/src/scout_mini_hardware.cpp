@@ -30,6 +30,8 @@ hardware_interface::CallbackReturn ScoutMiniHardware::on_init(const hardware_int
   wheel_radius_ = stod(info_.hardware_parameters["wheel_radius"]);
   wheel_separation_ = stod(info_.hardware_parameters["wheel_separation"]);
   timeout_ns_ = std::chrono::duration_cast<std::chrono::nanoseconds>(std::chrono::duration<double>(0.01));
+  // CAN 接收循环的阻塞超时，避免未初始化的 0ns 导致接收线程 busy loop
+  interval_ns_ = std::chrono::duration_cast<std::chrono::nanoseconds>(std::chrono::duration<double>(0.01));
 
   hw_commands_.resize(info_.joints.size(), std::numeric_limits<double>::quiet_NaN());
   hw_positions_.resize(info_.joints.size(), std::numeric_limits<double>::quiet_NaN());
@@ -448,25 +450,29 @@ void ScoutMiniHardware::publish()
 {
   if (rp_driver_state_->trylock())
   {
-    rp_driver_state_->msg_.header.stamp = rclcpp::Clock().now();
+    //rp_driver_state_->msg_.header.stamp = rclcpp::Clock().now();
+    rp_driver_state_->msg_.header.stamp = node_->get_clock()->now();
     rp_driver_state_->unlockAndPublish();
   }
 
   if (rp_light_state_->trylock())
   {
-    rp_light_state_->msg_.header.stamp = rclcpp::Clock().now();
+    //rp_light_state_->msg_.header.stamp = rclcpp::Clock().now();
+    rp_light_state_->msg_.header.stamp = node_->get_clock()->now();
     rp_light_state_->unlockAndPublish();
   }
 
   if (rp_motor_state_->trylock())
   {
-    rp_motor_state_->msg_.header.stamp = rclcpp::Clock().now();
+    //rp_motor_state_->msg_.header.stamp = rclcpp::Clock().now();
+    rp_motor_state_->msg_.header.stamp = node_->get_clock()->now();
     rp_motor_state_->unlockAndPublish();
   }
 
   if (rp_robot_state_->trylock())
   {
-    rp_robot_state_->msg_.header.stamp = rclcpp::Clock().now();
+    //rp_robot_state_->msg_.header.stamp = rclcpp::Clock().now();
+    rp_robot_state_->msg_.header.stamp = node_->get_clock()->now();
     rp_robot_state_->unlockAndPublish();
   }
 }
@@ -495,3 +501,4 @@ void ScoutMiniHardware::lightCmdCallback(const scout_mini_msgs::msg::LightComman
 
 #include "pluginlib/class_list_macros.hpp"
 PLUGINLIB_EXPORT_CLASS(scout_mini_hardware::ScoutMiniHardware, hardware_interface::SystemInterface)
+
