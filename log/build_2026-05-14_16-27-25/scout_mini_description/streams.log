@@ -1,0 +1,69 @@
+[0.072s] Invoking command in '/home/ros/scout_ws/build/scout_mini_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/ros/scout_ws/build/scout_mini_description -- -j6 -l6
+[0.223s] Invoked command in '/home/ros/scout_ws/build/scout_mini_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/ros/scout_ws/build/scout_mini_description -- -j6 -l6
+[0.248s] Invoking command in '/home/ros/scout_ws/build/scout_mini_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/ros/scout_ws/build/scout_mini_description
+[0.275s] -- Install configuration: ""
+[0.276s] -- Execute custom install script
+[0.277s] [33mCMake Warning (dev) at ament_cmake_symlink_install/ament_cmake_symlink_install.cmake:62 (file):
+[0.279s]   Policy CMP0009 is not set: FILE GLOB_RECURSE calls should not follow
+[0.279s]   symlinks by default.  Run "cmake --help-policy CMP0009" for policy details.
+[0.279s]   Use the cmake_policy command to set the policy and suppress this warning.
+[0.280s] Call Stack (most recent call first):
+[0.280s]   ament_cmake_symlink_install/ament_cmake_symlink_install.cmake:314 (ament_cmake_symlink_install_directory)
+[0.282s]   cmake_install.cmake:46 (include)
+[0.283s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[0.284s] [0m
+[0.284s] -- Up-to-date symlink: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/launch/build/.built_by
+[0.284s] -- Up-to-date symlink: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/launch/build/COLCON_IGNORE
+[0.285s] -- Up-to-date symlink: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/launch/cartographer.launch.py
+[0.285s] -- Up-to-date symlink: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/launch/description_launch.py
+[0.286s] -- Up-to-date symlink: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/launch/headless_sim_launch.py
+[0.286s] -- Up-to-date symlink: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/launch/install/.colcon_install_layout
+[0.286s] -- Up-to-date symlink: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/launch/install/COLCON_IGNORE
+[0.286s] -- Up-to-date symlink: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/launch/install/_local_setup_util_ps1.py
+[0.287s] -- Up-to-date symlink: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/launch/install/_local_setup_util_sh.py
+[0.287s] -- Up-to-date symlink: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/launch/install/local_setup.bash
+[0.287s] -- Up-to-date symlink: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/launch/install/local_setup.ps1
+[0.287s] -- Up-to-date symlink: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/launch/install/local_setup.sh
+[0.288s] -- Up-to-date symlink: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/launch/install/local_setup.zsh
+[0.288s] -- Up-to-date symlink: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/launch/install/setup.bash
+[0.290s] -- Up-to-date symlink: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/launch/install/setup.ps1
+[0.290s] -- Up-to-date symlink: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/launch/install/setup.sh
+[0.291s] -- Up-to-date symlink: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/launch/install/setup.zsh
+[0.291s] -- Up-to-date symlink: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/launch/log/COLCON_IGNORE
+[0.291s] -- Up-to-date symlink: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/launch/log/build_2026-02-06_18-03-30/events.log
+[0.292s] -- Up-to-date symlink: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/launch/log/build_2026-02-06_18-03-30/logger_all.log
+[0.294s] -- Up-to-date symlink: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/launch/log/build_2026-02-06_18-03-59/events.log
+[0.294s] -- Up-to-date symlink: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/launch/log/build_2026-02-06_18-03-59/logger_all.log
+[0.295s] -- Up-to-date symlink: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/launch/log/latest/events.log
+[0.296s] -- Up-to-date symlink: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/launch/log/latest/logger_all.log
+[0.298s] -- Up-to-date symlink: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/launch/log/latest_build/events.log
+[0.298s] -- Up-to-date symlink: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/launch/log/latest_build/logger_all.log
+[0.300s] -- Up-to-date symlink: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/launch/navigation.launch.py
+[0.300s] -- Up-to-date symlink: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/launch/rviz2_launch.py
+[0.300s] -- Up-to-date symlink: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/launch/scout_auto.launch.py
+[0.301s] -- Up-to-date symlink: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/meshes/body.dae
+[0.302s] -- Up-to-date symlink: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/meshes/wheel.dae
+[0.304s] -- Up-to-date symlink: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/rviz/scout_mini.rviz
+[0.305s] -- Up-to-date symlink: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/urdf/scout_mini.urdf.xacro
+[0.305s] -- Up-to-date symlink: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/urdf/scout_mini.urdf.xacro.bak
+[0.305s] -- Up-to-date symlink: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/config/scout_cartographer.lua
+[0.306s] -- Up-to-date symlink: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/config/scout_nav2.yaml
+[0.306s] -- Up-to-date symlink: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/worlds/turtlebot3_slow.world
+[0.306s] -- Up-to-date symlink: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/maps/my_scout_map.pgm
+[0.306s] -- Up-to-date symlink: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/maps/my_scout_map.yaml
+[0.307s] -- Up-to-date symlink: /home/ros/scout_ws/install/scout_mini_description/share/ament_index/resource_index/package_run_dependencies/scout_mini_description
+[0.307s] -- Up-to-date symlink: /home/ros/scout_ws/install/scout_mini_description/share/ament_index/resource_index/parent_prefix_path/scout_mini_description
+[0.307s] -- Up-to-date symlink: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/environment/ament_prefix_path.sh
+[0.307s] -- Up-to-date symlink: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/environment/ament_prefix_path.dsv
+[0.308s] -- Up-to-date symlink: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/environment/path.sh
+[0.308s] -- Up-to-date symlink: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/environment/path.dsv
+[0.309s] -- Up-to-date symlink: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/local_setup.bash
+[0.309s] -- Up-to-date symlink: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/local_setup.sh
+[0.310s] -- Up-to-date symlink: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/local_setup.zsh
+[0.310s] -- Up-to-date symlink: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/local_setup.dsv
+[0.310s] -- Symlinking: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/package.dsv
+[0.342s] -- Up-to-date symlink: /home/ros/scout_ws/install/scout_mini_description/share/ament_index/resource_index/packages/scout_mini_description
+[0.342s] -- Up-to-date symlink: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/cmake/scout_mini_descriptionConfig.cmake
+[0.344s] -- Up-to-date symlink: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/cmake/scout_mini_descriptionConfig-version.cmake
+[0.344s] -- Up-to-date symlink: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/package.xml
+[0.386s] Invoked command in '/home/ros/scout_ws/build/scout_mini_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/ros/scout_ws/build/scout_mini_description

@@ -1,0 +1,13 @@
+{
+  "map_name": "scout_mini_test_map",
+  "description": "Scout Mini 语义地图 - 单点导航测试",
+  "locations": [
+    {
+      "id": "p1",
+      "name": "充电桩",
+      "aliases": ["家", "基站", "回充点", "充电站"],
+      "coords": [0.773424, -0.109871, 0.0461686],
+      "description": "机器人充电位置"
+    }
+  ]
+}

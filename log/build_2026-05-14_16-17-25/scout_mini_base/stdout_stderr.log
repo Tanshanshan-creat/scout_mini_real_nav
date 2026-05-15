@@ -1,0 +1,19 @@
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/ros/scout_ws/install/scout_mini_base/share/scout_mini_base/config/scout_mini.yaml
+-- Symlinking: /home/ros/scout_ws/install/scout_mini_base/share/scout_mini_base/launch/base_launch.py
+-- Symlinking: /home/ros/scout_ws/install/scout_mini_base/share/ament_index/resource_index/package_run_dependencies/scout_mini_base
+-- Symlinking: /home/ros/scout_ws/install/scout_mini_base/share/ament_index/resource_index/parent_prefix_path/scout_mini_base
+-- Symlinking: /home/ros/scout_ws/install/scout_mini_base/share/scout_mini_base/environment/ament_prefix_path.sh
+-- Symlinking: /home/ros/scout_ws/install/scout_mini_base/share/scout_mini_base/environment/ament_prefix_path.dsv
+-- Symlinking: /home/ros/scout_ws/install/scout_mini_base/share/scout_mini_base/environment/path.sh
+-- Symlinking: /home/ros/scout_ws/install/scout_mini_base/share/scout_mini_base/environment/path.dsv
+-- Symlinking: /home/ros/scout_ws/install/scout_mini_base/share/scout_mini_base/local_setup.bash
+-- Symlinking: /home/ros/scout_ws/install/scout_mini_base/share/scout_mini_base/local_setup.sh
+-- Symlinking: /home/ros/scout_ws/install/scout_mini_base/share/scout_mini_base/local_setup.zsh
+-- Symlinking: /home/ros/scout_ws/install/scout_mini_base/share/scout_mini_base/local_setup.dsv
+-- Symlinking: /home/ros/scout_ws/install/scout_mini_base/share/scout_mini_base/package.dsv
+-- Symlinking: /home/ros/scout_ws/install/scout_mini_base/share/ament_index/resource_index/packages/scout_mini_base
+-- Symlinking: /home/ros/scout_ws/install/scout_mini_base/share/scout_mini_base/cmake/scout_mini_baseConfig.cmake
+-- Symlinking: /home/ros/scout_ws/install/scout_mini_base/share/scout_mini_base/cmake/scout_mini_baseConfig-version.cmake
+-- Symlinking: /home/ros/scout_ws/install/scout_mini_base/share/scout_mini_base/package.xml

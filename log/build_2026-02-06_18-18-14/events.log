@@ -1,0 +1,219 @@
+[0.000000] (-) TimerEvent: {}
+[0.003833] (-) JobUnselected: {'identifier': 'scout_mini_base'}
+[0.004613] (-) JobUnselected: {'identifier': 'scout_mini_hardware'}
+[0.004742] (-) JobUnselected: {'identifier': 'scout_mini_msgs'}
+[0.004931] (-) JobUnselected: {'identifier': 'scout_mini_ros2'}
+[0.005053] (scout_mini_description) JobQueued: {'identifier': 'scout_mini_description', 'dependencies': OrderedDict()}
+[0.005175] (scout_mini_description) JobStarted: {'identifier': 'scout_mini_description'}
+[0.089008] (scout_mini_description) JobProgress: {'identifier': 'scout_mini_description', 'progress': 'cmake'}
+[0.092932] (scout_mini_description) Command: {'cmd': ['/usr/bin/cmake', '/home/ros/scout_ws/src/scout_mini_ros2/scout_mini_description', '-DCMAKE_INSTALL_PREFIX=/home/ros/scout_ws/install/scout_mini_description'], 'cwd': '/home/ros/scout_ws/build/scout_mini_description', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_US:'), ('USER', 'ros'), ('LC_TIME', 'zh_CN.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/ros/scout_ws/install/scout_mini_msgs/lib:/home/ros/scout_ws/install/scout_mini_hardware/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/ros'), ('OLDPWD', '/home/ros/scout_ws/src/scout_mini_ros2/scout_mini_description'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('SYSTEMD_EXEC_PID', '1329'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/ros/scout_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'ros'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'ros'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/ros-virtual-machine:@/tmp/.ICE-unix/1307,unix/ros-virtual-machine:/tmp/.ICE-unix/1307'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/f31b4f17_2683_477c_b5b3_2fbdf532a695'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.14R7J3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.380'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/ros/scout_ws/install/scout_mini_ros2:/home/ros/scout_ws/install/scout_mini_msgs:/home/ros/scout_ws/install/scout_mini_hardware:/home/ros/scout_ws/install/scout_mini_description:/home/ros/scout_ws/install/scout_mini_base:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/ros/scout_ws/build/scout_mini_description'), ('TURTLEBOT3_MODEL', 'waffle_pi'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/ros/scout_ws/install/scout_mini_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/ros/scout_ws/install/scout_mini_ros2:/home/ros/scout_ws/install/scout_mini_msgs:/home/ros/scout_ws/install/scout_mini_hardware:/home/ros/scout_ws/install/scout_mini_description:/home/ros/scout_ws/install/scout_mini_base:/opt/ros/humble')]), 'shell': False}
+[0.099149] (-) TimerEvent: {}
+[0.200945] (-) TimerEvent: {}
+[0.302824] (-) TimerEvent: {}
+[0.404898] (-) TimerEvent: {}
+[0.507650] (-) TimerEvent: {}
+[0.609167] (-) TimerEvent: {}
+[0.614271] (scout_mini_description) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.710220] (-) TimerEvent: {}
+[0.812550] (-) TimerEvent: {}
+[0.914701] (-) TimerEvent: {}
+[1.016771] (-) TimerEvent: {}
+[1.070055] (scout_mini_description) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[1.118040] (-) TimerEvent: {}
+[1.122685] (scout_mini_description) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[1.219059] (-) TimerEvent: {}
+[1.320983] (-) TimerEvent: {}
+[1.423090] (-) TimerEvent: {}
+[1.525216] (-) TimerEvent: {}
+[1.627853] (-) TimerEvent: {}
+[1.701686] (scout_mini_description) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[1.729405] (-) TimerEvent: {}
+[1.731478] (scout_mini_description) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[1.732973] (scout_mini_description) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[1.735521] (scout_mini_description) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[1.750557] (scout_mini_description) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[1.829982] (-) TimerEvent: {}
+[1.931303] (-) TimerEvent: {}
+[2.034295] (-) TimerEvent: {}
+[2.137183] (-) TimerEvent: {}
+[2.239205] (-) TimerEvent: {}
+[2.341529] (-) TimerEvent: {}
+[2.432779] (scout_mini_description) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[2.443319] (-) TimerEvent: {}
+[2.460585] (scout_mini_description) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[2.462490] (scout_mini_description) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[2.464825] (scout_mini_description) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[2.487676] (scout_mini_description) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[2.546455] (-) TimerEvent: {}
+[2.648419] (-) TimerEvent: {}
+[2.750628] (-) TimerEvent: {}
+[2.852720] (-) TimerEvent: {}
+[2.954723] (-) TimerEvent: {}
+[3.056597] (-) TimerEvent: {}
+[3.158341] (-) TimerEvent: {}
+[3.260272] (-) TimerEvent: {}
+[3.362512] (-) TimerEvent: {}
+[3.372718] (scout_mini_description) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[3.463756] (-) TimerEvent: {}
+[3.565413] (-) TimerEvent: {}
+[3.666883] (-) TimerEvent: {}
+[3.769180] (-) TimerEvent: {}
+[3.871029] (-) TimerEvent: {}
+[3.901455] (scout_mini_description) StdoutLine: {'line': b'-- Found urdf: 2.6.1 (/opt/ros/humble/share/urdf/cmake)\n'}
+[3.972148] (-) TimerEvent: {}
+[4.073733] (-) TimerEvent: {}
+[4.175656] (-) TimerEvent: {}
+[4.198158] (scout_mini_description) StdoutLine: {'line': b'-- Found rviz2: 11.2.25 (/opt/ros/humble/share/rviz2/cmake)\n'}
+[4.211839] (scout_mini_description) StdoutLine: {'line': b'-- Found robot_state_publisher: 3.0.3 (/opt/ros/humble/share/robot_state_publisher/cmake)\n'}
+[4.277464] (-) TimerEvent: {}
+[4.368356] (scout_mini_description) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[4.379154] (-) TimerEvent: {}
+[4.402235] (scout_mini_description) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[4.462698] (scout_mini_description) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[4.480136] (-) TimerEvent: {}
+[4.543060] (scout_mini_description) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[4.581730] (-) TimerEvent: {}
+[4.627507] (scout_mini_description) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[4.682967] (-) TimerEvent: {}
+[4.785278] (-) TimerEvent: {}
+[4.887189] (-) TimerEvent: {}
+[4.939593] (scout_mini_description) StdoutLine: {'line': b'-- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)\n'}
+[4.945422] (scout_mini_description) StdoutLine: {'line': b'-- Found Eigen3: TRUE (found version "3.4.0") \n'}
+[4.946102] (scout_mini_description) StdoutLine: {'line': b'-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target\n'}
+[4.988537] (-) TimerEvent: {}
+[5.090314] (-) TimerEvent: {}
+[5.173871] (scout_mini_description) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[5.190015] (scout_mini_description) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.9 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[5.191108] (-) TimerEvent: {}
+[5.292951] (-) TimerEvent: {}
+[5.336971] (scout_mini_description) StdoutLine: {'line': b'-- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND\n'}
+[5.394547] (-) TimerEvent: {}
+[5.497343] (-) TimerEvent: {}
+[5.599227] (-) TimerEvent: {}
+[5.700777] (-) TimerEvent: {}
+[5.802793] (-) TimerEvent: {}
+[5.831595] (scout_mini_description) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[5.854216] (scout_mini_description) StdoutLine: {'line': b'-- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND\n'}
+[5.903971] (-) TimerEvent: {}
+[5.938942] (scout_mini_description) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[5.961619] (scout_mini_description) StdoutLine: {'line': b'-- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND\n'}
+[6.005833] (-) TimerEvent: {}
+[6.019929] (scout_mini_description) StdoutLine: {'line': b'-- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND\n'}
+[6.081905] (scout_mini_description) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[6.106911] (-) TimerEvent: {}
+[6.143660] (scout_mini_description) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[6.208662] (-) TimerEvent: {}
+[6.310574] (-) TimerEvent: {}
+[6.412698] (-) TimerEvent: {}
+[6.514837] (-) TimerEvent: {}
+[6.616676] (-) TimerEvent: {}
+[6.718001] (-) TimerEvent: {}
+[6.767806] (scout_mini_description) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[6.770985] (scout_mini_description) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[6.819192] (-) TimerEvent: {}
+[6.921699] (-) TimerEvent: {}
+[7.023457] (-) TimerEvent: {}
+[7.125234] (-) TimerEvent: {}
+[7.227522] (-) TimerEvent: {}
+[7.329827] (-) TimerEvent: {}
+[7.424647] (scout_mini_description) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[7.431089] (-) TimerEvent: {}
+[7.432886] (scout_mini_description) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[7.532741] (-) TimerEvent: {}
+[7.634805] (-) TimerEvent: {}
+[7.737270] (-) TimerEvent: {}
+[7.839840] (-) TimerEvent: {}
+[7.941755] (-) TimerEvent: {}
+[8.045855] (-) TimerEvent: {}
+[8.147750] (-) TimerEvent: {}
+[8.249533] (-) TimerEvent: {}
+[8.351679] (-) TimerEvent: {}
+[8.453072] (-) TimerEvent: {}
+[8.543431] (scout_mini_description) StdoutLine: {'line': b'-- Configuring done\n'}
+[8.554045] (-) TimerEvent: {}
+[8.599246] (scout_mini_description) StdoutLine: {'line': b'-- Generating done\n'}
+[8.613544] (scout_mini_description) StdoutLine: {'line': b'-- Build files have been written to: /home/ros/scout_ws/build/scout_mini_description\n'}
+[8.655542] (-) TimerEvent: {}
+[8.680055] (scout_mini_description) CommandEnded: {'returncode': 0}
+[8.682046] (scout_mini_description) JobProgress: {'identifier': 'scout_mini_description', 'progress': 'build'}
+[8.682160] (scout_mini_description) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/ros/scout_ws/build/scout_mini_description', '--', '-j6', '-l6'], 'cwd': '/home/ros/scout_ws/build/scout_mini_description', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_US:'), ('USER', 'ros'), ('LC_TIME', 'zh_CN.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/ros/scout_ws/install/scout_mini_msgs/lib:/home/ros/scout_ws/install/scout_mini_hardware/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/ros'), ('OLDPWD', '/home/ros/scout_ws/src/scout_mini_ros2/scout_mini_description'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('SYSTEMD_EXEC_PID', '1329'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/ros/scout_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'ros'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'ros'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/ros-virtual-machine:@/tmp/.ICE-unix/1307,unix/ros-virtual-machine:/tmp/.ICE-unix/1307'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/f31b4f17_2683_477c_b5b3_2fbdf532a695'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.14R7J3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.380'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/ros/scout_ws/install/scout_mini_ros2:/home/ros/scout_ws/install/scout_mini_msgs:/home/ros/scout_ws/install/scout_mini_hardware:/home/ros/scout_ws/install/scout_mini_description:/home/ros/scout_ws/install/scout_mini_base:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/ros/scout_ws/build/scout_mini_description'), ('TURTLEBOT3_MODEL', 'waffle_pi'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/ros/scout_ws/install/scout_mini_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/ros/scout_ws/install/scout_mini_ros2:/home/ros/scout_ws/install/scout_mini_msgs:/home/ros/scout_ws/install/scout_mini_hardware:/home/ros/scout_ws/install/scout_mini_description:/home/ros/scout_ws/install/scout_mini_base:/opt/ros/humble')]), 'shell': False}
+[8.756283] (-) TimerEvent: {}
+[8.857877] (-) TimerEvent: {}
+[8.959893] (-) TimerEvent: {}
+[9.037138] (scout_mini_description) CommandEnded: {'returncode': 0}
+[9.041324] (scout_mini_description) JobProgress: {'identifier': 'scout_mini_description', 'progress': 'install'}
+[9.062580] (-) TimerEvent: {}
+[9.126717] (scout_mini_description) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/ros/scout_ws/build/scout_mini_description'], 'cwd': '/home/ros/scout_ws/build/scout_mini_description', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_US:'), ('USER', 'ros'), ('LC_TIME', 'zh_CN.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/ros/scout_ws/install/scout_mini_msgs/lib:/home/ros/scout_ws/install/scout_mini_hardware/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/ros'), ('OLDPWD', '/home/ros/scout_ws/src/scout_mini_ros2/scout_mini_description'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('SYSTEMD_EXEC_PID', '1329'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/ros/scout_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'ros'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'ros'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/ros-virtual-machine:@/tmp/.ICE-unix/1307,unix/ros-virtual-machine:/tmp/.ICE-unix/1307'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/f31b4f17_2683_477c_b5b3_2fbdf532a695'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.14R7J3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.380'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/ros/scout_ws/install/scout_mini_ros2:/home/ros/scout_ws/install/scout_mini_msgs:/home/ros/scout_ws/install/scout_mini_hardware:/home/ros/scout_ws/install/scout_mini_description:/home/ros/scout_ws/install/scout_mini_base:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/ros/scout_ws/build/scout_mini_description'), ('TURTLEBOT3_MODEL', 'waffle_pi'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/ros/scout_ws/install/scout_mini_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/ros/scout_ws/install/scout_mini_ros2:/home/ros/scout_ws/install/scout_mini_msgs:/home/ros/scout_ws/install/scout_mini_hardware:/home/ros/scout_ws/install/scout_mini_description:/home/ros/scout_ws/install/scout_mini_base:/opt/ros/humble')]), 'shell': False}
+[9.163370] (-) TimerEvent: {}
+[9.186690] (scout_mini_description) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[9.189093] (scout_mini_description) StdoutLine: {'line': b'-- Installing: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/launch\n'}
+[9.189940] (scout_mini_description) StdoutLine: {'line': b'-- Installing: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/launch/description_launch.py\n'}
+[9.191430] (scout_mini_description) StdoutLine: {'line': b'-- Installing: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/launch/install\n'}
+[9.191878] (scout_mini_description) StdoutLine: {'line': b'-- Installing: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/launch/install/setup.bash\n'}
+[9.193991] (scout_mini_description) StdoutLine: {'line': b'-- Installing: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/launch/install/local_setup.sh\n'}
+[9.194494] (scout_mini_description) StdoutLine: {'line': b'-- Installing: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/launch/install/setup.zsh\n'}
+[9.196621] (scout_mini_description) StdoutLine: {'line': b'-- Installing: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/launch/install/setup.sh\n'}
+[9.198026] (scout_mini_description) StdoutLine: {'line': b'-- Installing: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/launch/install/setup.ps1\n'}
+[9.200297] (scout_mini_description) StdoutLine: {'line': b'-- Installing: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/launch/install/local_setup.bash\n'}
+[9.201286] (scout_mini_description) StdoutLine: {'line': b'-- Installing: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/launch/install/local_setup.ps1\n'}
+[9.202051] (scout_mini_description) StdoutLine: {'line': b'-- Installing: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/launch/install/.colcon_install_layout\n'}
+[9.204266] (scout_mini_description) StdoutLine: {'line': b'-- Installing: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/launch/install/COLCON_IGNORE\n'}
+[9.205001] (scout_mini_description) StdoutLine: {'line': b'-- Installing: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/launch/install/_local_setup_util_ps1.py\n'}
+[9.207686] (scout_mini_description) StdoutLine: {'line': b'-- Installing: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/launch/install/local_setup.zsh\n'}
+[9.208417] (scout_mini_description) StdoutLine: {'line': b'-- Installing: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/launch/install/_local_setup_util_sh.py\n'}
+[9.209719] (scout_mini_description) StdoutLine: {'line': b'-- Installing: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/launch/scout_auto.launch.py\n'}
+[9.210003] (scout_mini_description) StdoutLine: {'line': b'-- Installing: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/launch/log\n'}
+[9.212636] (scout_mini_description) StdoutLine: {'line': b'-- Installing: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/launch/log/latest_build\n'}
+[9.213360] (scout_mini_description) StdoutLine: {'line': b'-- Installing: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/launch/log/build_2026-02-06_18-03-59\n'}
+[9.219620] (scout_mini_description) StdoutLine: {'line': b'-- Installing: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/launch/log/build_2026-02-06_18-03-59/events.log\n'}
+[9.219994] (scout_mini_description) StdoutLine: {'line': b'-- Installing: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/launch/log/build_2026-02-06_18-03-59/logger_all.log\n'}
+[9.220310] (scout_mini_description) StdoutLine: {'line': b'-- Installing: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/launch/log/build_2026-02-06_18-03-30\n'}
+[9.220566] (scout_mini_description) StdoutLine: {'line': b'-- Installing: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/launch/log/build_2026-02-06_18-03-30/events.log\n'}
+[9.221213] (scout_mini_description) StdoutLine: {'line': b'-- Installing: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/launch/log/build_2026-02-06_18-03-30/logger_all.log\n'}
+[9.221914] (scout_mini_description) StdoutLine: {'line': b'-- Installing: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/launch/log/latest\n'}
+[9.222209] (scout_mini_description) StdoutLine: {'line': b'-- Installing: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/launch/log/COLCON_IGNORE\n'}
+[9.224184] (scout_mini_description) StdoutLine: {'line': b'-- Installing: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/launch/rviz2_launch.py\n'}
+[9.224513] (scout_mini_description) StdoutLine: {'line': b'-- Installing: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/launch/headless_sim_launch.py\n'}
+[9.225148] (scout_mini_description) StdoutLine: {'line': b'-- Installing: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/launch/navigation.launch.py\n'}
+[9.226669] (scout_mini_description) StdoutLine: {'line': b'-- Installing: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/launch/build\n'}
+[9.227228] (scout_mini_description) StdoutLine: {'line': b'-- Installing: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/launch/build/.built_by\n'}
+[9.228749] (scout_mini_description) StdoutLine: {'line': b'-- Installing: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/launch/build/COLCON_IGNORE\n'}
+[9.230990] (scout_mini_description) StdoutLine: {'line': b'-- Installing: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/launch/cartographer.launch.py\n'}
+[9.232862] (scout_mini_description) StdoutLine: {'line': b'-- Installing: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/meshes\n'}
+[9.234628] (scout_mini_description) StdoutLine: {'line': b'-- Installing: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/meshes/body.dae\n'}
+[9.264727] (-) TimerEvent: {}
+[9.366926] (-) TimerEvent: {}
+[9.432184] (scout_mini_description) StdoutLine: {'line': b'-- Installing: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/meshes/wheel.dae\n'}
+[9.467593] (scout_mini_description) StdoutLine: {'line': b'-- Installing: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/rviz\n'}
+[9.468245] (-) TimerEvent: {}
+[9.468719] (scout_mini_description) StdoutLine: {'line': b'-- Installing: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/rviz/scout_mini.rviz\n'}
+[9.470693] (scout_mini_description) StdoutLine: {'line': b'-- Installing: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/urdf\n'}
+[9.471222] (scout_mini_description) StdoutLine: {'line': b'-- Installing: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/urdf/scout_mini.urdf.xacro.bak\n'}
+[9.471650] (scout_mini_description) StdoutLine: {'line': b'-- Installing: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/urdf/scout_mini.urdf.xacro\n'}
+[9.472492] (scout_mini_description) StdoutLine: {'line': b'-- Installing: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/config\n'}
+[9.474694] (scout_mini_description) StdoutLine: {'line': b'-- Installing: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/config/scout_nav2.yaml\n'}
+[9.475631] (scout_mini_description) StdoutLine: {'line': b'-- Installing: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/config/scout_cartographer.lua\n'}
+[9.476725] (scout_mini_description) StdoutLine: {'line': b'-- Installing: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/worlds\n'}
+[9.477778] (scout_mini_description) StdoutLine: {'line': b'-- Installing: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/worlds/turtlebot3_slow.world\n'}
+[9.479615] (scout_mini_description) StdoutLine: {'line': b'-- Installing: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/maps\n'}
+[9.480209] (scout_mini_description) StdoutLine: {'line': b'-- Installing: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/maps/my_scout_map.yaml\n'}
+[9.483024] (scout_mini_description) StdoutLine: {'line': b'-- Installing: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/maps/my_scout_map.pgm\n'}
+[9.484586] (scout_mini_description) StdoutLine: {'line': b'-- Installing: /home/ros/scout_ws/install/scout_mini_description/share/ament_index/resource_index/package_run_dependencies/scout_mini_description\n'}
+[9.486846] (scout_mini_description) StdoutLine: {'line': b'-- Installing: /home/ros/scout_ws/install/scout_mini_description/share/ament_index/resource_index/parent_prefix_path/scout_mini_description\n'}
+[9.491049] (scout_mini_description) StdoutLine: {'line': b'-- Installing: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/environment/ament_prefix_path.sh\n'}
+[9.492072] (scout_mini_description) StdoutLine: {'line': b'-- Installing: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/environment/ament_prefix_path.dsv\n'}
+[9.493915] (scout_mini_description) StdoutLine: {'line': b'-- Installing: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/environment/path.sh\n'}
+[9.495452] (scout_mini_description) StdoutLine: {'line': b'-- Installing: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/environment/path.dsv\n'}
+[9.497557] (scout_mini_description) StdoutLine: {'line': b'-- Installing: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/local_setup.bash\n'}
+[9.499389] (scout_mini_description) StdoutLine: {'line': b'-- Installing: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/local_setup.sh\n'}
+[9.500422] (scout_mini_description) StdoutLine: {'line': b'-- Installing: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/local_setup.zsh\n'}
+[9.502621] (scout_mini_description) StdoutLine: {'line': b'-- Installing: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/local_setup.dsv\n'}
+[9.508387] (scout_mini_description) StdoutLine: {'line': b'-- Installing: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/package.dsv\n'}
+[9.509001] (scout_mini_description) StdoutLine: {'line': b'-- Installing: /home/ros/scout_ws/install/scout_mini_description/share/ament_index/resource_index/packages/scout_mini_description\n'}
+[9.509736] (scout_mini_description) StdoutLine: {'line': b'-- Installing: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/cmake/scout_mini_descriptionConfig.cmake\n'}
+[9.510183] (scout_mini_description) StdoutLine: {'line': b'-- Installing: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/cmake/scout_mini_descriptionConfig-version.cmake\n'}
+[9.516798] (scout_mini_description) StdoutLine: {'line': b'-- Installing: /home/ros/scout_ws/install/scout_mini_description/share/scout_mini_description/package.xml\n'}
+[9.519214] (scout_mini_description) CommandEnded: {'returncode': 0}
+[9.570309] (-) TimerEvent: {}
+[9.617943] (scout_mini_description) JobEnded: {'identifier': 'scout_mini_description', 'rc': 0}
+[9.623893] (-) EventReactorShutdown: {}

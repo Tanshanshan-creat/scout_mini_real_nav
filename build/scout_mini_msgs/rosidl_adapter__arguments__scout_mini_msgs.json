@@ -1,0 +1,11 @@
+{
+  "package_name": "scout_mini_msgs",
+  "non_idl_tuples": [
+    "/home/ros/scout_ws/src/scout_mini_ros2/scout_mini_msgs:msg/DriverState.msg",
+    "/home/ros/scout_ws/src/scout_mini_ros2/scout_mini_msgs:msg/FaultState.msg",
+    "/home/ros/scout_ws/src/scout_mini_ros2/scout_mini_msgs:msg/LightCommand.msg",
+    "/home/ros/scout_ws/src/scout_mini_ros2/scout_mini_msgs:msg/LightState.msg",
+    "/home/ros/scout_ws/src/scout_mini_ros2/scout_mini_msgs:msg/MotorState.msg",
+    "/home/ros/scout_ws/src/scout_mini_ros2/scout_mini_msgs:msg/RobotState.msg"
+  ]
+}
