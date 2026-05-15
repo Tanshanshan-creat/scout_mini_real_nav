@@ -1,0 +1,41 @@
+{
+  "map_name": "scout_mini_test_map",
+  "description": "Scout Mini 语义地图 - 包含地点名称、别名和坐标",
+  "locations": [
+    {
+      "id": "p1",
+      "name": "会议室",
+      "aliases": ["开会的地方", "老板办公室", "会议厅"],
+      "coords": [3.5, -1.2, 1.57],
+      "description": "一楼大会议室"
+    },
+    {
+      "id": "p2",
+      "name": "充电桩",
+      "aliases": ["家", "基站", "回充点", "充电站"],
+      "coords": [0.0, 0.0, 0.0],
+      "description": "机器人充电位置(原点)"
+    },
+    {
+      "id": "p3",
+      "name": "前台",
+      "aliases": ["大厅", "入口", "门口", "接待处"],
+      "coords": [5.0, 2.0, 0.0],
+      "description": "公司入口前台"
+    },
+    {
+      "id": "p4",
+      "name": "茶水间",
+      "aliases": ["饮水机", "喝水的地方", "休息区"],
+      "coords": [-2.0, 3.0, 1.57],
+      "description": "茶水间和休息区"
+    },
+    {
+      "id": "p5",
+      "name": "仓库",
+      "aliases": ["库房", "储物间", "存储室"],
+      "coords": [-4.0, -2.0, 3.14],
+      "description": "物品存放仓库"
+    }
+  ]
+}
